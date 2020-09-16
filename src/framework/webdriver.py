@@ -1,6 +1,9 @@
-from selenium import webdriver
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from selenium.webdriver.support.ui import WebDriverWait
+try:
+    from selenium import webdriver
+    from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+    from selenium.webdriver.support.ui import WebDriverWait
+except Exception as e:
+    print('Some modules are missing {}'.format(e))
 
 class WebDriverContainer(object):
     def __init__(self):

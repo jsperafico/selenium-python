@@ -8,6 +8,8 @@ services:
         VARIANT: 3
         INSTALL_NODE: "false"
         NODE_VERSION: lts/*
+    environment:
+      - PYTHONPATH=/workspaces/python
     volumes:
       - ../:/workspaces/python
     command: sleep infinity

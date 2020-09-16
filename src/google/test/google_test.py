@@ -1,6 +1,9 @@
-import unittest
-from framework.webdriver import WebDriverContainer, WebDriverWaitContainer
-from google.pages import GoogleHomePage
+try:
+    import unittest
+    from src.framework.webdriver import WebDriverContainer, WebDriverWaitContainer
+    from src.google.pages import GoogleHomePage
+except Exception as e:
+    print('Some modules are missing {}'.format(e))
 
 class GoogleTest(unittest.TestCase):
     def setUp(self):

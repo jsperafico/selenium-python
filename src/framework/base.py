@@ -1,5 +1,9 @@
-from framework.webdriver import WebDriverWaitContainer, WebDriverContainer
-from selenium.webdriver.common.by import By
+try:
+    from src.framework.webdriver import WebDriverWaitContainer, WebDriverContainer
+    from selenium.webdriver.common.by import By
+except Exception as e:
+    print('Some modules are missing {}'.format(e))
+
 
 class BasePageElement(object):
     def __init__(self):

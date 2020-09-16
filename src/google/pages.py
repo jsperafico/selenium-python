@@ -1,8 +1,11 @@
-from selenium.webdriver.support import expected_conditions as ec
-from selenium.webdriver.common.by import By
-from selenium.webdriver import Remote
-from framework.base import BasePage 
-from framework.webdriver import WebDriverWaitContainer, WebDriverContainer
+try:
+    from selenium.webdriver.support import expected_conditions as ec
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver import Remote
+    from src.framework.base import BasePage 
+    from src.framework.webdriver import WebDriverWaitContainer, WebDriverContainer
+except Exception as e:
+    print('Some modules are missing {}'.format(e))
 
 class GoogleHomePage(BasePage):
 
